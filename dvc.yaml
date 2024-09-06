@@ -1,0 +1,28 @@
+stages:
+  build_dataset:
+    cmd: bin/build_dataset.py
+    deps:
+    - artefacts/data/raw
+    - bin/build_dataset.py
+    outs:
+    - artefacts/data/processed
+    params:
+    - data
+  build_features:
+    cmd: bin/build_features.py
+    deps:
+    - artefacts/data/processed
+    - bin/build_features.py
+    outs:
+    - artefacts/features
+  build_trainer:
+    cmd: bin/build_trainer.py
+    deps:
+      - artefacts/data/processed
+      - artefacts/data/features
+      - bin/build_trainer.py
+    params:
+      - model
+
+
+

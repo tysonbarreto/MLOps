@@ -1,0 +1,16 @@
+numpy 
+scikit-learn 
+xgboost
+fastapi
+pydantic 
+#dvc
+pandas
+pyarrow
+fastparquet
+tqdm 
+jupyterlab 
+matplotlib
+seaborn
+#dvc
+#yaml
+#python-box[all]~=7.0
